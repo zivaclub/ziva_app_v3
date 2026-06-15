@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand: #cffc02; /* Sporty neon lime yellow */
+  --color-brand-neon: #d4fc04;
+  --color-brand-purple: #811ef6; /* Deep electric purple */
+  --color-dark-surface: #0a0a0c;
+  --color-dark-card: #121217;
+  --color-dark-border: #1f1f28;
+}
+
+@layer utilities {
+  /* No scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Shiny futuristic borders */
+  .glow-border-lime {
+    box-shadow: 0 0 12px rgba(207, 252, 2, 0.15);
+    border: 1px solid rgba(207, 252, 2, 0.3);
+  }
+  .glow-border-purple {
+    box-shadow: 0 0 12px rgba(129, 30, 246, 0.2);
+    border: 1px solid rgba(129, 30, 246, 0.32);
+  }
+}
+
+body {
+  background-color: #050507;
+  color: #f1f1f3;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
